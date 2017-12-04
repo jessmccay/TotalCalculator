@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace ConsoleApp1
 {
@@ -6,7 +8,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Receipt printFirstReceipt = new Receipt(ShoppingCart.FirstItems());
+            
+            Receipt printSecondReceipt = new Receipt(ShoppingCart.NextItems());
+
+            Receipt printFinalReceipt = new Receipt(ShoppingCart.FinalItems());
+
+            Console.ReadLine();
         }
     }
 }
